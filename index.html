@@ -9,7 +9,21 @@
 
 <h1>JavaScript Playground 🎉</h1>
 
+<!-- 1. Event Handling -->
+<section aria-label="Event Handling">
+  <h2>1. Event Handling 🎈</h2>
+  <div style="text-align:center;">
+    <button id="eventClickBtn" aria-describedby="eventClickMsg">Click Me!</button>
+    <p class="message" id="eventClickMsg" aria-live="polite"></p>
+  </div>
 
+  <div id="hoverBox" tabindex="0" aria-label="Hover Box"></div>
+  <p class="message" id="hoverMsg" aria-live="polite" style="text-align:center; margin-top:-10px;"></p>
+
+  <label for="keypressInput">Type something:</label>
+  <input type="text" id="keypressInput" aria-describedby="keypressMsg" autocomplete="off" placeholder="Start typing..." />
+  <p class="message" id="keypressMsg" aria-live="polite"></p>
+</section>
 
 </body>
 </html>
