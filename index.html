@@ -63,5 +63,23 @@
   </div>
 </section>
 
+<!-- 3. Form Validation -->
+<section aria-label="Form Validation">
+  <h2>3. Form Validation 📋✅</h2>
+  <form id="myForm" novalidate>
+    <input type="text" id="name" name="name" placeholder="Name (required)" aria-describedby="nameFeedback" required autocomplete="off" />
+    <div aria-live="polite" class="feedback" id="nameFeedback"></div>
+
+    <input type="email" id="email" name="email" placeholder="Email (required)" aria-describedby="emailFeedback" required autocomplete="off" />
+    <div aria-live="polite" class="feedback" id="emailFeedback"></div>
+
+    <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" aria-describedby="passwordFeedback" required autocomplete="off" />
+    <div aria-live="polite" class="feedback" id="passwordFeedback"></div>
+
+    <button type="submit" id="submitBtn">Submit</button>
+  </form>
+  <p class="message" id="formMessage" aria-live="polite"></p>
+</section>
+
 </body>
 </html>
