@@ -4,82 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Event Handling & Interactive Elements</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1>JavaScript Playground 🎉</h1>
 
-<!-- 1. Event Handling -->
-<section aria-label="Event Handling">
-  <h2>1. Event Handling 🎈</h2>
-  <div style="text-align:center;">
-    <button id="eventClickBtn" aria-describedby="eventClickMsg">Click Me!</button>
-    <p class="message" id="eventClickMsg" aria-live="polite"></p>
-  </div>
+ <!-- Event Handling Section -->
+    <section>
+        <h2>1. Event Handling 🎈</h2>
+        <button id="eventClickBtn">Click Me!</button>
+        <p id="eventClickMsg"></p>
+        <div id="hoverBox"></div>
+        <p id="hoverMsg"></p>
+        <input type="text" id="keypressInput" placeholder="Type something...">
+        <p id="keypressMsg"></p>
+    </section>
 
-  <div id="hoverBox" tabindex="0" aria-label="Hover Box"></div>
-  <p class="message" id="hoverMsg" aria-live="polite" style="text-align:center; margin-top:-10px;"></p>
+    <!-- Interactive Elements Section -->
+    <section>
+        <h2>2. Interactive Elements 🎮</h2>
+        <button id="changeTextBtn">Change My Text</button>
+        <div id="gallery">
+            <img id="galleryImage" src="https://picsum.photos/320/180?random=1" alt="Gallery Image">
+            <button id="nextImageBtn">Next Image</button>
+        </div>
+        <div class="tabs">
+            <div class="tab active">Tab 1</div>
+            <div class="tab">Tab 2</div>
+            <div class="tab">Tab 3</div>
+        </div>
+        <div class="tab-content active">Tab 1 Content</div>
+        <div class="tab-content">Tab 2 Content</div>
+        <div class="tab-content">Tab 3 Content</div>
+        <button class="accordion">Accordion Item 1</button>
+        <div class="panel">Accordion Content 1</div>
+        <button class="accordion">Accordion Item 2</button>
+        <div class="panel">Accordion Content 2</div>
+    </section>
 
-  <label for="keypressInput">Type something:</label>
-  <input type="text" id="keypressInput" aria-describedby="keypressMsg" autocomplete="off" placeholder="Start typing..." />
-  <p class="message" id="keypressMsg" aria-live="polite"></p>
-</section>
-
-
-<!-- 2. Interactive Elements -->
-<section aria-label="Interactive Elements">
-  <h2>2. Interactive Elements 🎮</h2>
-
-  <div style="text-align:center; margin-bottom: 1rem;">
-    <button id="changeTextBtn">Change My Text & Color</button>
-  </div>
-
-  <div id="gallery" aria-label="Image gallery" style="margin-bottom: 1rem;">
-    <img id="galleryImage" src="https://picsum.photos/320/180?random=1" alt="Gallery Image" />
-    <button id="nextImageBtn" aria-label="Next image in gallery" style="margin-top: 0.5rem;">Next Image</button>
-  </div>
-
-  <div>
-    <div class="tabs" role="tablist">
-      <div tabindex="0" role="tab" aria-selected="true" aria-controls="tab1panel" id="tab1" class="tab active">Tab 1</div>
-      <div tabindex="-1" role="tab" aria-selected="false" aria-controls="tab2panel" id="tab2" class="tab">Tab 2</div>
-      <div tabindex="-1" role="tab" aria-selected="false" aria-controls="tab3panel" id="tab3" class="tab">Tab 3</div>
-    </div>
-    <div id="tab1panel" class="tab-content" role="tabpanel" aria-labelledby="tab1">This is content for Tab 1. You can add anything here.</div>
-    <div id="tab2panel" class="tab-content" role="tabpanel" aria-labelledby="tab2" style="display:none;">Here's Tab 2's content! More cool stuff.</div>
-    <div id="tab3panel" class="tab-content" role="tabpanel" aria-labelledby="tab3" style="display:none;">Tab 3 content displayed here. Have fun!</div>
-  </div>
-
-  <div class="accordion-section" aria-label="Accordion content">
-    <button class="accordion" aria-expanded="false" aria-controls="panel1" id="acc1">Accordion Item 1</button>
-    <div id="panel1" class="panel" role="region" aria-labelledby="acc1">
-      This is the first accordion panel content. Animations included!
-    </div>
-
-    <button class="accordion" aria-expanded="false" aria-controls="panel2" id="acc2">Accordion Item 2</button>
-    <div id="panel2" class="panel" role="region" aria-labelledby="acc2">
-      Here's the second accordion panel content. Try opening it!
-    </div>
-  </div>
-</section>
-
-<!-- 3. Form Validation -->
-<section aria-label="Form Validation">
-  <h2>3. Form Validation 📋✅</h2>
-  <form id="myForm" novalidate>
-    <input type="text" id="name" name="name" placeholder="Name (required)" aria-describedby="nameFeedback" required autocomplete="off" />
-    <div aria-live="polite" class="feedback" id="nameFeedback"></div>
-
-    <input type="email" id="email" name="email" placeholder="Email (required)" aria-describedby="emailFeedback" required autocomplete="off" />
-    <div aria-live="polite" class="feedback" id="emailFeedback"></div>
-
-    <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" aria-describedby="passwordFeedback" required autocomplete="off" />
-    <div aria-live="polite" class="feedback" id="passwordFeedback"></div>
-
-    <button type="submit" id="submitBtn">Submit</button>
-  </form>
-  <p class="message" id="formMessage" aria-live="polite"></p>
-</section>
+    <!-- Form Validation Section -->
+    <section>
+        <h2>3. Form Validation 📋</h2>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <div id="nameFeedback"></div>
+            <input type="email" id="email" placeholder="Email" required>
+            <div id="emailFeedback"></div>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="passwordFeedback"></div>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
 
 <script>scr="script.js"</script>
 </body>
