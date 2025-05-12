@@ -25,5 +25,43 @@
   <p class="message" id="keypressMsg" aria-live="polite"></p>
 </section>
 
+
+<!-- 2. Interactive Elements -->
+<section aria-label="Interactive Elements">
+  <h2>2. Interactive Elements 🎮</h2>
+
+  <div style="text-align:center; margin-bottom: 1rem;">
+    <button id="changeTextBtn">Change My Text & Color</button>
+  </div>
+
+  <div id="gallery" aria-label="Image gallery" style="margin-bottom: 1rem;">
+    <img id="galleryImage" src="https://picsum.photos/320/180?random=1" alt="Gallery Image" />
+    <button id="nextImageBtn" aria-label="Next image in gallery" style="margin-top: 0.5rem;">Next Image</button>
+  </div>
+
+  <div>
+    <div class="tabs" role="tablist">
+      <div tabindex="0" role="tab" aria-selected="true" aria-controls="tab1panel" id="tab1" class="tab active">Tab 1</div>
+      <div tabindex="-1" role="tab" aria-selected="false" aria-controls="tab2panel" id="tab2" class="tab">Tab 2</div>
+      <div tabindex="-1" role="tab" aria-selected="false" aria-controls="tab3panel" id="tab3" class="tab">Tab 3</div>
+    </div>
+    <div id="tab1panel" class="tab-content" role="tabpanel" aria-labelledby="tab1">This is content for Tab 1. You can add anything here.</div>
+    <div id="tab2panel" class="tab-content" role="tabpanel" aria-labelledby="tab2" style="display:none;">Here's Tab 2's content! More cool stuff.</div>
+    <div id="tab3panel" class="tab-content" role="tabpanel" aria-labelledby="tab3" style="display:none;">Tab 3 content displayed here. Have fun!</div>
+  </div>
+
+  <div class="accordion-section" aria-label="Accordion content">
+    <button class="accordion" aria-expanded="false" aria-controls="panel1" id="acc1">Accordion Item 1</button>
+    <div id="panel1" class="panel" role="region" aria-labelledby="acc1">
+      This is the first accordion panel content. Animations included!
+    </div>
+
+    <button class="accordion" aria-expanded="false" aria-controls="panel2" id="acc2">Accordion Item 2</button>
+    <div id="panel2" class="panel" role="region" aria-labelledby="acc2">
+      Here's the second accordion panel content. Try opening it!
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
